@@ -30,7 +30,7 @@ namespace Task2_17611708_Muller_A
         private void Form1_Load(Object sender, EventArgs e)
         {
             DisplayMap();
-        }
+        }// calls the displayMap method
 
         private void DisplayMap()
         {
@@ -50,19 +50,19 @@ namespace Task2_17611708_Muller_A
                     if (m.Faction == 1)
                     {
                         b.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         b.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     if (m.IsDeath())
                     {
                         b.ForeColor = Color.Black;
-                    }
+                    }//end if
 
                     b.Click += new EventHandler(button_click);
                     mapBox.Controls.Add(b);
-                }
+                }//end if 
                 else if (u.GetType() == typeof(Ranged_Unit))
                 {
                     int start_x, start_y;
@@ -76,19 +76,19 @@ namespace Task2_17611708_Muller_A
                     if (m.Faction == 1)
                     {
                         b.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         b.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     if (m.IsDeath())
                     {
                         b.ForeColor = Color.Black;
-                    }
+                    }//end if
 
                     b.Click += new EventHandler(button_click);
                     mapBox.Controls.Add(b);
-                }
+                }//end else if
                 else if (u.GetType() == typeof(Tank))
                 {
                     int start_x, start_y;
@@ -102,19 +102,19 @@ namespace Task2_17611708_Muller_A
                     if (m.Faction == 1)
                     {
                         b.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         b.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     if (m.IsDeath())
                     {
                         b.ForeColor = Color.Black;
-                    }
+                    }//end if
 
                     b.Click += new EventHandler(button_click);
                     mapBox.Controls.Add(b);
-                }
+                }//end else if
                 else if (u.GetType() == typeof(Helicopter))
                 {
                     int start_x, start_y;
@@ -128,19 +128,19 @@ namespace Task2_17611708_Muller_A
                     if (m.Faction == 1)
                     {
                         b.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         b.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     if (m.IsDeath())
                     {
                         b.ForeColor = Color.Black;
-                    }
+                    }//end if
 
                     b.Click += new EventHandler(button_click);
                     mapBox.Controls.Add(b);
-                }
+                }//else if
                 else if (u.GetType() == typeof(Fighter_Jets))
                 {
                     int start_x, start_y;
@@ -154,23 +154,23 @@ namespace Task2_17611708_Muller_A
                     if (m.Faction == 1)
                     {
                         b.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         b.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     if (m.IsDeath())
                     {
                         b.ForeColor = Color.Black;
-                    }
+                    }//end if
 
                     b.Click += new EventHandler(button_click);
                     mapBox.Controls.Add(b);
-                }
+                }//end else if
 
 
 
-            }
+            }//end for each 
 
             foreach (Building b in map.Buildings)
             {
@@ -187,11 +187,11 @@ namespace Task2_17611708_Muller_A
                     if (fb.Faction == 1)
                     {
                         btn.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         btn.ForeColor = Color.Blue;
-                    }
+                    }//end else
                     mapBox.Controls.Add(btn);
 
                 }//end if
@@ -208,11 +208,11 @@ namespace Task2_17611708_Muller_A
                     if (rb.Faction == 1)
                     {
                         btn.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         btn.ForeColor = Color.Blue;
-                    }
+                    }//end else
 
                     mapBox.Controls.Add(btn);
                 }//end else if
@@ -229,11 +229,11 @@ namespace Task2_17611708_Muller_A
                     if (fh.Faction == 1)
                     {
                         btn.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         btn.ForeColor = Color.Blue;
-                    }
+                    }//end else
 
                     mapBox.Controls.Add(btn);
                 }//end else if
@@ -250,11 +250,11 @@ namespace Task2_17611708_Muller_A
                     if (wu.Faction == 1)
                     {
                         btn.ForeColor = Color.Red;
-                    }
+                    }//end if
                     else
                     {
                         btn.ForeColor = Color.Blue;
-                    }
+                    }//end else
 
                     mapBox.Controls.Add(btn);
                 }//end else if
@@ -262,7 +262,7 @@ namespace Task2_17611708_Muller_A
 
 
             }//end foreach
-        }
+        }// creates new buttons for every unit and building saved in the arrays. each button is made to match the type of unit or building it is by changing colours and letters displayed on it.
 
         private void UpdateMap()
         {

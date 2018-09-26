@@ -1,2 +1,2 @@
-Factory Building,100,9,2,0,F
-Factory Building,100,7,16,1,F
+Factory Building,100,8,17,0,F
+Factory Building,100,16,13,1,F

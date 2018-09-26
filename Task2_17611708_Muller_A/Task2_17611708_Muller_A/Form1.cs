@@ -274,7 +274,7 @@ namespace Task2_17611708_Muller_A
                     if (m.IsDeath())
                     {
                         m.Symbol = "D";
-                    }
+                    }//end if
                     if (m.Health < 25)
                     {
                         switch (r.Next(0, 4))
@@ -283,8 +283,8 @@ namespace Task2_17611708_Muller_A
                             case 1: m.MovePos(Direction.East); break;
                             case 2: m.MovePos(Direction.South); break;
                             case 3: m.MovePos(Direction.West); break;
-                        }
-                    }
+                        }//end switch
+                    }//end if
                     else
                     {
                         bool inCombat = false;
@@ -295,17 +295,17 @@ namespace Task2_17611708_Muller_A
                             {
                                 m.Fight(e);
                                 inCombat = true;
-                            }
-                        }
+                            }//end if
+                        }//end foreach
                         if (!inCombat)
                         {
                             Unit c = m.NearestUnit(map.Units);
                             m.MovePos(m.DirectionTo(c));
-                        }
-                    }
+                        }//end if
+                    }//end else
 
 
-                }
+                }//end if
                 else if (u.GetType() == typeof(Ranged_Unit))
                 {
                     Ranged_Unit m = (Ranged_Unit)u;
@@ -313,7 +313,7 @@ namespace Task2_17611708_Muller_A
                     {
                         m.Symbol = "D";
 
-                    }
+                    }//end if
                     if (m.Health < 25)
                     {
                         switch (r.Next(0, 4))
@@ -322,8 +322,8 @@ namespace Task2_17611708_Muller_A
                             case 1: m.MovePos(Direction.East); break;
                             case 2: m.MovePos(Direction.South); break;
                             case 3: m.MovePos(Direction.West); break;
-                        }
-                    }
+                        }//end switch
+                    }//end if
                     else
                     {
                         bool inCombat = false;
@@ -334,17 +334,17 @@ namespace Task2_17611708_Muller_A
                             {
                                 m.Fight(e);
                                 inCombat = true;
-                            }
-                        }
+                            }//end if 
+                        }//end foreach
                         if (!inCombat)
                         {
                             Unit c = m.NearestUnit(map.Units);
                             m.MovePos(m.DirectionTo(c));
-                        }
-                    }
+                        }//end if
+                    }//end else
 
 
-                }
+                }//end else if 
                 else if (u.GetType() == typeof(Tank))
                 {
                     Tank m = (Tank)u;
@@ -352,7 +352,7 @@ namespace Task2_17611708_Muller_A
                     {
                         m.Symbol = "D";
 
-                    }
+                    }//end if
                     if (m.Health < 25)
                     {
                         switch (r.Next(0, 4))
@@ -361,8 +361,8 @@ namespace Task2_17611708_Muller_A
                             case 1: m.MovePos(Direction.East); break;
                             case 2: m.MovePos(Direction.South); break;
                             case 3: m.MovePos(Direction.West); break;
-                        }
-                    }
+                        }//end switch
+                    }//end if
                     else
                     {
                         bool inCombat = false;
@@ -373,17 +373,17 @@ namespace Task2_17611708_Muller_A
                             {
                                 m.Fight(e);
                                 inCombat = true;
-                            }
-                        }
+                            }//end if
+                        }//end foreach
                         if (!inCombat)
                         {
                             Unit c = m.NearestUnit(map.Units);
                             m.MovePos(m.DirectionTo(c));
-                        }
-                    }
+                        }//end if
+                    }//end else
 
 
-                }
+                }//end else if
                 else if (u.GetType() == typeof(Fighter_Jets))
                 {
                     Fighter_Jets m = (Fighter_Jets)u;
@@ -391,7 +391,7 @@ namespace Task2_17611708_Muller_A
                     {
                         m.Symbol = "D";
 
-                    }
+                    }//end if
                     if (m.Health < 25)
                     {
                         switch (r.Next(0, 4))
@@ -400,8 +400,8 @@ namespace Task2_17611708_Muller_A
                             case 1: m.MovePos(Direction.East); break;
                             case 2: m.MovePos(Direction.South); break;
                             case 3: m.MovePos(Direction.West); break;
-                        }
-                    }
+                        }//end switch
+                    }//end if
                     else
                     {
                         bool inCombat = false;
@@ -412,17 +412,17 @@ namespace Task2_17611708_Muller_A
                             {
                                 m.Fight(e);
                                 inCombat = true;
-                            }
-                        }
+                            }//end if
+                        }//end foreach
                         if (!inCombat)
                         {
                             Unit c = m.NearestUnit(map.Units);
                             m.MovePos(m.DirectionTo(c));
-                        }
-                    }
+                        }//end if
+                    }//end else
 
 
-                }
+                }//end else if
                 else if (u.GetType() == typeof(Helicopter))
                 {
                     Helicopter m = (Helicopter)u;
@@ -430,7 +430,7 @@ namespace Task2_17611708_Muller_A
                     {
                         m.Symbol = "D";
 
-                    }
+                    }//end if
                     if (m.Health < 25)
                     {
                         switch (r.Next(0, 4))
@@ -439,8 +439,8 @@ namespace Task2_17611708_Muller_A
                             case 1: m.MovePos(Direction.East); break;
                             case 2: m.MovePos(Direction.South); break;
                             case 3: m.MovePos(Direction.West); break;
-                        }
-                    }
+                        }//end switch
+                    }//end if
                     else
                     {
                         bool inCombat = false;
@@ -451,19 +451,19 @@ namespace Task2_17611708_Muller_A
                             {
                                 m.Fight(e);
                                 inCombat = true;
-                            }
-                        }
+                            }//end if
+                        }//end foreach
                         if (!inCombat)
                         {
                             Unit c = m.NearestUnit(map.Units);
                             m.MovePos(m.DirectionTo(c));
-                        }
-                    }
+                        }//end if
+                    }//end else
 
 
-                }
-            }
-        }
+                }//end else if
+            }//end foreach
+        }// updates the map by chaging values of units. calls movement methods and fight methods to change values in order for the map to change.
 
        
         private void button_click(object sender, EventArgs e)
@@ -479,42 +479,42 @@ namespace Task2_17611708_Muller_A
                     if ((m.XPos == x) && (m.YPos == y))
                     {
                         txtDisplay.Text = "Button Clicked At: " + m.ToString();
-                    }
-                }
+                    }//end if
+                }//end if
                 else if (u.GetType() == typeof(Ranged_Unit))
                 {
                     Ranged_Unit m = (Ranged_Unit)u;
                     if ((m.XPos == x) && (m.YPos == y))
                     {
                         txtDisplay.Text = "Button Clicked At: " + m.ToString();
-                    }
-                }
+                    }//end if
+                }//end else if 
                 else if (u.GetType() == typeof(Tank))
                 {
                     Tank m = (Tank)u;
                     if ((m.XPos == x) && (m.YPos == y))
                     {
                         txtDisplay.Text = "Button Clicked At: " + m.ToString();
-                    }
-                }
+                    }//end if
+                }//end else if
                 else if (u.GetType() == typeof(Helicopter))
                 {
                     Helicopter m = (Helicopter)u;
                     if ((m.XPos == x) && (m.YPos == y))
                     {
                         txtDisplay.Text = "Button Clicked At: " + m.ToString();
-                    }
-                }
+                    }//end if
+                }//end else if
                 else if (u.GetType() == typeof(Fighter_Jets))
                 {
                     Fighter_Jets m = (Fighter_Jets)u;
                     if ((m.XPos == x) && (m.YPos == y))
                     {
                         txtDisplay.Text = "Button Clicked At: " + m.ToString();
-                    }
-                }
-            }
-        }
+                    }//end if 
+                }//end else if
+            }//end foreach
+        }//when a unit button is clicked on this method is used to display the information of the unit selected by clicking on it's button.
 
         
 
@@ -525,18 +525,18 @@ namespace Task2_17611708_Muller_A
             turn++;
             labTime.Text = turn + "";
 
-        }
+        }//calls the updatemap and displaymap methods. increases the turn counter and updates the labtime lable.
 
         private void butStart_Click_1(object sender, EventArgs e)
         {
             timer1.Enabled = true;
 
-        }
+        }//enables the timer
 
         private void butStop_Click_1(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-        }
+        }//disables the timer 
 
         private void btnSave_Click(object sender, EventArgs e)
         {

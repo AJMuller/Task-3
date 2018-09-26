@@ -1,0 +1,2 @@
+Resource Building,100,17,14,0,+
+Resource Building,100,1,18,1,+

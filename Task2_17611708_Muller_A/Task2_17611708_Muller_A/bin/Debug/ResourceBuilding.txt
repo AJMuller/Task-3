@@ -1,0 +1,2 @@
+Resource Building,100,0,18,0,S
+Resource Building,100,3,12,1,S
